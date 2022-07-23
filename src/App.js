@@ -1,9 +1,10 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from "./pages/homepage/homepage.component";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import ShopPage from './pages/shop/shop.component';
 
 
-function HatsPage() {
+function HatsPage() { 
   return (
     <div>
       <h1>Hats Page</h1>
@@ -18,7 +19,7 @@ function App() {
       <Router>
        <Routes>
           <Route path='/' element = {<HomePage/>} />
-          <Route path='/shop/hats' element = {<HatsPage />} />
+          <Route path='/shop' element = {<ShopPage />} />
         </Routes>
       </Router>
     </div>
